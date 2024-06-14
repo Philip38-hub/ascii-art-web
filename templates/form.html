@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASCII Art</title>
+</head>
+<body>
+    <h1>ASCII Art</h1>
+    <form method="post" action="/ascii-art">
+        <label for="text">Text:</label>
+        <textarea id="text" name="text">{{ .Text }}</textarea>
+        <br>
+        <label for="banner">Banner:</label>
+        <select id="banner" name="banner">
+            <option value="standard">Standard</option>
+            <option value="shadow">Shadow</option>
+            <option value="thinkertoy">Thinkertoy</option>
+        </select>
+        <br>
+        <input type="submit" value="Generate ASCII Art">
+    </form>
+    <pre>{{ .Result }}</pre>
+</body>
+</html>
+
